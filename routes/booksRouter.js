@@ -19,9 +19,3 @@ BooksRouter.put("/:id", updateBook);
 BooksRouter.delete("/:id", deleteBook);
 
 export default BooksRouter;
-
-
-
-
-
-

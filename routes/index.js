@@ -1,6 +1,6 @@
 import express from "express";
 import membersRouter from "./membersRouter.js";
-import booksRouter from "./booksRouter";
+import booksRouter from "./booksRouter.js";
 
 const router = express.Router();
 

@@ -1,4 +1,4 @@
-import Book from "../models/books.model.js";
+import Books from "../models/books.model.js";
 
 //add new book
 
@@ -82,9 +82,9 @@ export async function viewAllBooks(req, res) {
 //Update Book record
 export async function updateBook(req, res) {
     try{
-       let Book = await Books.findAll({where: {book_id: req.params.Book_id}});
+       let Book = await Books.findAll({where: {book_id: req.params.id}});
        if (Book) {
-           await Books.update(req.body, {where : {book_id: req.params.Book_id}})
+           await Books.update(req.body, {where : {book_id: req.params.id}})
            .then(flag => {
                if (flag == 1){
                    res.json({
