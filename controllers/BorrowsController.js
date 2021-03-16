@@ -81,7 +81,7 @@ export async function viewUserBorrowedBook(req, res) {
 }
 
 //View all Borrows
-export async function viewAllBorrows(req, res) {
+export async function viewAllBorrowedBook(req, res) {
     try {
         let allBorrows = await Borrows.findAll();
         if (allBorrows) {
@@ -119,13 +119,11 @@ export async function returnBook(req, res) {
                    res.json({
                        success: true, 
                        message: "Book returned succusfully",
-                       data: book
                    })
                } else {
                    res.json({
-                       success: true, 
+                       success: false, 
                        message: "Book was not returned",
-                       data: book
                    })
                }
            });

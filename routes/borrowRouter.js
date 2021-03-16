@@ -4,18 +4,18 @@ import { borrowBook, returnBook, viewAllBorrowedBook, viewBorrowedBook, viewUser
 const BorrowsRouter = express.Router();
 
 //Add a Book
-BooksRouter.post("/", borrowBook);
+BorrowsRouter.post("/", borrowBook);
 
 //View a Book Books/:id
-BooksRouter.get("/:id", viewBorrowedBook);
+BorrowsRouter.get("/:id", viewBorrowedBook);
 
 //View all Books Books/
-BooksRouter.get("/", viewAllBorrowedBook);
+BorrowsRouter.get("/", viewAllBorrowedBook);
 
 //Update Book record Books/
-BooksRouter.put("/:member_name", viewUserBorrowedBook);
+BorrowsRouter.put("/:member_name", viewUserBorrowedBook);
 
 //Delete a Book Books/:id
-BooksRouter.delete("/:id", returnBook);
+BorrowsRouter.delete("/:id", returnBook);
 
 export default BorrowsRouter;
