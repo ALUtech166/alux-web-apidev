@@ -13,7 +13,7 @@ BorrowsRouter.get("/:id", viewBorrowedBook);
 BorrowsRouter.get("/", viewAllBorrowedBook);
 
 //Update Book record Books/
-BorrowsRouter.put("/:member_name", viewUserBorrowedBook);
+BorrowsRouter.put("/bymember/:member_name", viewUserBorrowedBook);
 
 //Delete a Book Books/:id
 BorrowsRouter.delete("/:id", returnBook);
